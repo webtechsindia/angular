@@ -21,7 +21,15 @@ var app    =    angular.module('app',[]).config(function($routeProvider){
     })
 });
 
-app.controller('loginController',function(){
+app.controller('loginController',function($location,$scope){
+   
+    $scope.login    =   function(){
+        if(($scope.username=="hari") &&  ($scope.password=="123456")){
+           $location.path('/home');
+        }else{
+            $scope.error     =   "Authentication error";
+        }
+    }
     
 })
 
