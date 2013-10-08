@@ -4,7 +4,7 @@
                 username 
             </div>
             <div class="span6">
-                <input type="text" class="input-small" >
+                <input type="text" class="input-small" ng-model="username" >{{username}}
             </div>
         </div>
         <div class="row">
@@ -12,7 +12,7 @@
                 password
             </div>
             <div class="span6">
-                    <input type="password" class="input-small" ></inpu>
+                    <input type="password" class="input-small"   ng-model="password"></inpu>{{password}}
             </div>
         </div>    
         <div class="row">
