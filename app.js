@@ -13,7 +13,7 @@ var app    =    angular.module('app',[]).config(function($routeProvider){
         controller:'homeController'
     })
     $routeProvider.when('/gallery',{
-        templateUrl:'tpl.html',
+        templateUrl:'gallery.php',
         controller:'galleryController'
     })
     $routeProvider.otherwise({
@@ -35,6 +35,19 @@ app.controller('loginController',function($location,$scope){
 
 app.controller('homeController',function(){
 
+})
+
+app.directive('showOnHover',function(){
+    return{
+        restrict:"A",//a=attributes,c=classname,E=elementm=comemnt
+        link:function(scope,element,attributes){
+           var originalmessage  =   scope.message;
+           element.bind('mouseover',function(){
+               scope.color  =   attributes.message;
+               scope.$apply();
+           })
+        }
+    }
 })
 
 app.controller('galleryController',function(){
