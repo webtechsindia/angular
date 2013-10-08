@@ -3,6 +3,11 @@ var app    =    angular.module('app',[]).config(function($routeProvider){
            templateUrl:'login.php',
            controller:'loginController' 
     })  
+    $routeProvider.when('/login',{
+           templateUrl:'login.php',
+           controller:'loginController' 
+    })  
+    
     $routeProvider.when('/home',{
         templateUrl:'home.php',
         controller:'homeController'
@@ -12,7 +17,7 @@ var app    =    angular.module('app',[]).config(function($routeProvider){
         controller:'galleryController'
     })
     $routeProvider.otherwise({
-           redirectTo: '/home',
+           redirectTo: '/login',
     })
 });
 

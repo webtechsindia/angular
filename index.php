@@ -23,8 +23,6 @@
                 </form>
             </div>
         </div> 
-       
-   
         <div class="container-fluid maindiv"  ng-view>
             
             
